@@ -1,0 +1,58 @@
+api_register:
+    path: /api/register
+    controller: App\Controller\AuthController::register
+    methods: [POST]
+
+api_login:
+    path: /api/login
+    methods: [POST]
+
+api_project_list:
+    path: /api/v1/projects
+    controller: App\Controller\ProjectController::index
+    methods: [GET]
+
+api_project_read:
+    path: /api/v1/projects/{id}
+    controller: App\Controller\ProjectController::show
+    methods: [GET]
+
+api_project_create:
+    path: /api/v1/projects
+    controller: App\Controller\ProjectController::store
+    methods: [POST]
+
+api_project_update:
+    path: /api/v1/projects/{id}
+    controller: App\Controller\ProjectController::update
+    methods: [PUT]
+
+api_project_delete:
+    path: /api/v1/projects/{id}
+    controller: App\Controller\ProjectController::delete
+    methods: [DELETE]
+
+api_task_list:
+    path: /api/v1/projects/{projectId}/tasks
+    controller: App\Controller\TaskController::index
+    methods: [GET]
+
+api_task_read:
+    path: /api/v1/projects/{projectId}/tasks/{id}
+    controller: App\Controller\TaskController::show
+    methods: [GET]
+
+api_task_create:
+    path: /api/v1/projects/{projectId}/tasks
+    controller: App\Controller\TaskController::store
+    methods: [POST]
+
+api_task_update:
+    path: /api/v1/projects/{projectId}/tasks/{id}
+    controller: App\Controller\TaskController::update
+    methods: [PUT]
+
+api_task_delete:
+    path: /api/v1/projects/{projectId}/tasks/{id}
+    controller: App\Controller\TaskController::delete
+    methods: [DELETE]
